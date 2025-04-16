@@ -52,6 +52,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="jose-jwt, Version=5.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\jose-jwt.5.1.1\lib\net472\jose-jwt.dll</HintPath>
+    </Reference>
     <Reference Include="Konscious.Security.Cryptography.Argon2, Version=1.3.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Konscious.Security.Cryptography.Argon2.1.3.1\lib\net46\Konscious.Security.Cryptography.Argon2.dll</HintPath>
     </Reference>
@@ -129,6 +132,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
@@ -222,60 +226,67 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\DiscountsController.cs" />
+    <Compile Include="Controllers\DogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LineAuthController.cs" />
+    <Compile Include="Controllers\LinePayController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
+    <Compile Include="Controllers\PlanController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\UserfirstController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202503180136209_user.cs" />
-    <Compile Include="Migrations\202503180136209_user.Designer.cs">
-      <DependentUpon>202503180136209_user.cs</DependentUpon>
+    <Compile Include="Migrations\202504050559385_444.cs" />
+    <Compile Include="Migrations\202504050559385_444.Designer.cs">
+      <DependentUpon>202504050559385_444.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202503180142282_DiscountEmployee.cs" />
-    <Compile Include="Migrations\202503180142282_DiscountEmployee.Designer.cs">
-      <DependentUpon>202503180142282_DiscountEmployee.cs</DependentUpon>
+    <Compile Include="Migrations\202504060714021_0406.cs" />
+    <Compile Include="Migrations\202504060714021_0406.Designer.cs">
+      <DependentUpon>202504060714021_0406.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202503180145441_all.cs" />
-    <Compile Include="Migrations\202503180145441_all.Designer.cs">
-      <DependentUpon>202503180145441_all.cs</DependentUpon>
+    <Compile Include="Migrations\202504060859390_040601.cs" />
+    <Compile Include="Migrations\202504060859390_040601.Designer.cs">
+      <DependentUpon>202504060859390_040601.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202503180925597_model.cs" />
-    <Compile Include="Migrations\202503180925597_model.Designer.cs">
-      <DependentUpon>202503180925597_model.cs</DependentUpon>
+    <Compile Include="Migrations\202504080435153_go.cs" />
+    <Compile Include="Migrations\202504080435153_go.Designer.cs">
+      <DependentUpon>202504080435153_go.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202503190547073_Longitude.cs" />
-    <Compile Include="Migrations\202503190547073_Longitude.Designer.cs">
-      <DependentUpon>202503190547073_Longitude.cs</DependentUpon>
+    <Compile Include="Migrations\202504090556022_0409.cs" />
+    <Compile Include="Migrations\202504090556022_0409.Designer.cs">
+      <DependentUpon>202504090556022_0409.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202503190801468_datetime.cs" />
-    <Compile Include="Migrations\202503190801468_datetime.Designer.cs">
-      <DependentUpon>202503190801468_datetime.cs</DependentUpon>
+    <Compile Include="Migrations\202504100446474_0410.cs" />
+    <Compile Include="Migrations\202504100446474_0410.Designer.cs">
+      <DependentUpon>202504100446474_0410.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202503190835517_nill.cs" />
-    <Compile Include="Migrations\202503190835517_nill.Designer.cs">
-      <DependentUpon>202503190835517_nill.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202503200746403_OrderStatus.cs" />
-    <Compile Include="Migrations\202503200746403_OrderStatus.Designer.cs">
-      <DependentUpon>202503200746403_OrderStatus.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202503200759240_weekday.cs" />
-    <Compile Include="Migrations\202503200759240_weekday.Designer.cs">
-      <DependentUpon>202503200759240_weekday.cs</DependentUpon>
+    <Compile Include="Migrations\202504150500003_0415.cs" />
+    <Compile Include="Migrations\202504150500003_0415.Designer.cs">
+      <DependentUpon>202504150500003_0415.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Discount.cs" />
+    <Compile Include="Models\DriverPhoto.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\EnumList.cs" />
+    <Compile Include="Security\HmacSignature.cs" />
+    <Compile Include="Security\LinePay.cs" />
     <Compile Include="Models\Model1.cs" />
+    <Compile Include="Models\OrderDetails.cs" />
     <Compile Include="Models\Orders.cs" />
     <Compile Include="Models\Photo.cs" />
     <Compile Include="Models\Plan.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\JwtAuthFilter - line.cs" />
     <Compile Include="Security\JwtAuthFilter.cs" />
+    <Compile Include="Security\JwtAuthUtil - line.cs" />
     <Compile Include="Security\JwtAuthUtil.cs" />
+    <Compile Include="Security\LinePayService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -328,6 +339,7 @@
     <Content Include="Scripts\jquery-3.7.0.slim.js" />
     <Content Include="Scripts\jquery-3.7.0.slim.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Security\dog2.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -346,7 +358,10 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Uitility\" />
+    <Folder Include="Uploads\" />
     <Folder Include="Views\Orders\" />
+    <Folder Include="Views\Photo\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\bootstrap.min.js.map" />
@@ -420,32 +435,26 @@
     <Content Include="Scripts\jquery-3.7.0.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202503180136209_user.resx">
-      <DependentUpon>202503180136209_user.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202504050559385_444.resx">
+      <DependentUpon>202504050559385_444.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202503180142282_DiscountEmployee.resx">
-      <DependentUpon>202503180142282_DiscountEmployee.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202504060714021_0406.resx">
+      <DependentUpon>202504060714021_0406.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202503180145441_all.resx">
-      <DependentUpon>202503180145441_all.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202504060859390_040601.resx">
+      <DependentUpon>202504060859390_040601.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202503180925597_model.resx">
-      <DependentUpon>202503180925597_model.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202504080435153_go.resx">
+      <DependentUpon>202504080435153_go.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202503190547073_Longitude.resx">
-      <DependentUpon>202503190547073_Longitude.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202504090556022_0409.resx">
+      <DependentUpon>202504090556022_0409.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202503190801468_datetime.resx">
-      <DependentUpon>202503190801468_datetime.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202504100446474_0410.resx">
+      <DependentUpon>202504100446474_0410.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202503190835517_nill.resx">
-      <DependentUpon>202503190835517_nill.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202503200746403_OrderStatus.resx">
-      <DependentUpon>202503200746403_OrderStatus.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202503200759240_weekday.resx">
-      <DependentUpon>202503200759240_weekday.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202504150500003_0415.resx">
+      <DependentUpon>202504150500003_0415.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

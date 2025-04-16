@@ -15,19 +15,14 @@ namespace Dog.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int PhotoID { get; set; }
 
-        [Display(Name = "訂單ID")]
+        [Display(Name = "訂單編號ID")]
+        [ForeignKey("Orders")]  // 設定外鍵，關聯到 Orders 表
         public int OrdersID { get; set; }
-        [JsonIgnore]
-        [ForeignKey("OrdersID")]
-        public virtual Orders Orders { get; set; }
+        public virtual Orders Orders { get; set; }  // 這是導航屬性
 
         [Display(Name = "放置圖")]
         [MaxLength(255)]
         public string OrderImageUrl { get; set; }
-
-        [Display(Name = "接單者拍照")]
-        [MaxLength(255)]
-        public string DrivermageUrl { get; set; }
 
         [Display(Name = "建立日期")]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:d}")]
